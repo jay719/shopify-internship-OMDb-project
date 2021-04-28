@@ -11,7 +11,7 @@ export default function MoviesContainer() {
         
     }
     return (
-        <div classsName="Mcontainers">
+        <div classsName="Mcontainer">
             {showMovies}
         </div>
     )
