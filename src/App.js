@@ -18,15 +18,17 @@ const searchMovie = () => {
 
   return (
   <div>
-      <div classname="Header">  
-      <label>
-          Movies:
-          <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} />
-        </label>
-      <input type="submit" value="Submit" onClick={searchMovie} />
-    </div>
-    <div classname="Mcontainer">
-      <MovieCard movie={movie} />
+    <div className="Search">
+        <div className="Header">  
+        <label className="label">
+            Movies:
+            <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} />
+          </label>
+        <input type="submit" value="Submit" onClick={searchMovie} />
+      </div>
+      <div className="Mcontainer">
+        <MovieCard movie={movie} />
+      </div>
     </div>
   </div>
 

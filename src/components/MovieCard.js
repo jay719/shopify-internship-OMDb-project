@@ -5,13 +5,13 @@ export default function MovieCard({movie}) {
 
     return (
         <div className="Mcard"> 
-            <h1 classname="Mtitle">{movie.Title}</h1>
-            <h2 classname="Mrating">{movie.Rated}</h2>
-            <p classname="Mdescription"> {movie.Plot}</p>
-            <img classname="Mposter" src={movie.Poster} alt={movie.title} style={ {height: '50px',
-  width:'50px'}}/>
+            <h1 className="Mtitle">{movie.Title}</h1>
+            <h2 className="Mrating">{movie.Rated}</h2>
+            <p className="Mdescription"> {movie.Plot}</p>
+            <img className="Mposter" src={movie.Poster} alt={movie.title} style={ {height: '120px',
+  width:'100px'}}/>
             <p>hi</p>
-            <buton classname="Nbutton">Nomnate?</buton>
+            <button className="Nbutton">Nomnate?</button>
         </div>
     )
 }
