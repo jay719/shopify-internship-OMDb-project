@@ -14,7 +14,7 @@ const [search, setSearch] = useState('')
       <div className="Header">  
       <label>
           Movies:
-          <input type="text" value={search} onChange={(e) => setSearch({value})} />
+          <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} />
         </label>
       <input type="submit" value="Submit" />
     </div>
