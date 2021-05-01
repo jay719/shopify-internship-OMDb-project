@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "omdb-movie-nominater",
     "public": "build",
     "ignore": [
       "firebase.json",
@@ -13,5 +12,6 @@
         "destination": "/index.html"
       }
     ]
-  }
+  },
+  "site": "omdb-movie-nominater"
 }
