@@ -22,7 +22,7 @@ const apikey = "be23069c"
     <div className="Search">    
         <div className="Header">  
         <label className="label">
-            Movies:
+            Movie:
             <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} />
           </label>
         <input type="submit" value="Submit" onClick={searchMovie} />

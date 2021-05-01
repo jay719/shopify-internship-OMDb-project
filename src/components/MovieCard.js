@@ -10,7 +10,7 @@ export default function MovieCard({movie}) {
             <p className="Mdescription"> {movie.Plot}</p>
             <img className="Mposter" src={movie.Poster} alt={movie.title} style={ {height: '120px',
   width:'100px'}}/>
-            <p>hi</p>
+            <p></p>
             <button className="Nbutton">Nomnate?</button>
         </div>
     )
