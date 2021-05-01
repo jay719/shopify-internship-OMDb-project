@@ -25,7 +25,7 @@ const apiKey = "be23069c"
             Movie:
             <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} />
           </label>
-        <input type="submit" value="Submit" onClick={searchMovie} />
+        <input type="submit" value="Submit" onClick={searchMovie()} />
       </div>
       <div className="Mcontainer">
         <MovieCard movie={movie} />
