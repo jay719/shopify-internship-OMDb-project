@@ -10,7 +10,7 @@ const [movie, setMovie] = useState('')
   
 
 const searchMovie = () => {
-    fetch(`http://www.omdbapi.com/?t=${search}&apikey=${apikey}&type=movie&r=json`)
+    fetch(`https://www.omdbapi.com/?t=${search}&apikey=${apikey}&type=movie&r=json`)
     .then(response => response.json())
     .then(movie => setMovie(movie))
 
