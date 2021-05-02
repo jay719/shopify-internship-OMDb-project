@@ -19,5 +19,10 @@
 }
 
 .label{
-  color: aliceblue;
+  
+}
+
+.nominated-movies {
+  
+  list-style-type:decimal
 }

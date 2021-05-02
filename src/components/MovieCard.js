@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function MovieCard({movie}) {
-    console.log(movie)
+export default function MovieCard({movie, nominate}) {
+    
 
     return (
         <div className="Mcard"> 
@@ -11,7 +11,7 @@ export default function MovieCard({movie}) {
             <img className="Mposter" src={movie.Poster} alt={movie.title} style={ {height: '120px',
   width:'100px'}}/>
             <p></p>
-            <button className="Nbutton">Nomnate</button>
+            <button className="Nbutton" onClick={() => nominate(movie)}>Nomnate</button>
         </div>
     )
 }
