@@ -10,9 +10,11 @@ function App() {
 const [nMovies, setNMovies] = useState([]) 
 const [search, setSearch] = useState('')
 const [movie, setMovie] = useState('')
+const [visible, setModalVisible] = useState(false)
 
 const nominateMovie = (movie) => {
   console.log("done")
+  setModalVisible(!visible)
   if (nMovies.length < 5) {setNMovies(nMovies => nMovies.concat(movie))}
 }
 
@@ -28,29 +30,30 @@ const apiKey = "be23069c"
   return (
    
   <div>
-    <div className="Search">    
-        <div className="Header">  
-        <label className="label">
-            Movie:
-            <input 
-            type="text" 
-            value={search} 
-            onChange={(e) => {
-              setSearch(e.target.value); 
-              {searchMovie()}
-                } 
-              }
-              />
-          </label>
-        <input type="submit" value="Submit" onClick={searchMovie} />
-      </div>
+        <div className="Search">  
+          <label className="label">
+              Movie:
+              <input 
+              type="text" 
+              value={search} 
+              onChange={(e) => {
+                  setSearch(e.target.value); 
+                  {searchMovie()}
+                    } 
+                  }
+                />
+            </label>
+          <input type="submit" value="Submit" onClick={searchMovie} />
+        
+          </div >
+        
       <div className="Mcontainer">
         <MovieCard movie={movie} nominate={nominateMovie}/>
-        
       </div>
-      <NominatedMovies movies={nMovies} />
       
-    </div>
+      <div className="Ncontainer">
+      <NominatedMovies movies={nMovies} />
+      </div>
   </div>
   
     
