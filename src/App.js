@@ -29,11 +29,12 @@ const searchMovie = () => {
 const apiKey = "be23069c"
   return (
    
-  <div>
+  <div className="body">
         <div className="Search">  
           <label className="label">
-              Movie:
+              Movie Selector
               <input 
+              className="Sbar"
               type="text" 
               value={search} 
               onChange={(e) => {
@@ -43,7 +44,8 @@ const apiKey = "be23069c"
                   }
                 />
             </label>
-          <input type="submit" value="Submit" onClick={searchMovie} />
+            <img className="Sbutton"src="https://webstockreview.net/images/movie-icon-png.png" alt="search" onClick={searchMovie} />
+          {/* <input type="submit" value="Submit" onClick={searchMovie} /> */}
         
           </div >
         
