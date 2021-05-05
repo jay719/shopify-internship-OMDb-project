@@ -5,10 +5,12 @@ import Rating from 'react-rating'
 export default function MovieCard({movie, nominate}) {
     
     const [review, setReview] = useState('')
+    const [rating, setRating] = useState(0)
     const [add, addReview] = useState(true)
     const getRating = (newRating) => {
-        console.log(newRating)
+        setRating(newRating)
     }
+    
     return (
         <div className="Mcard"> 
             <h1 className="Mtitle">{movie.Title}</h1>
