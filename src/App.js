@@ -32,7 +32,7 @@ const apiKey = "be23069c"
   <div className="body">
         <div className="Search">  
           <label className="label">
-              Movie Selector
+              Movie Finder
               <input 
               className="Sbar"
               type="text" 

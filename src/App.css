@@ -1,10 +1,14 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+html, body {  min-height: 100vh; background-color:#ffbfbf; font-family: 'Itim', cursive;; }
 .body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  /* background-color: ; */
-  margin-top: 3rem
+  flex:1;
+  /* paddipadding-bottom: 3rem; */
+  
 }
 
 .Search{
@@ -18,15 +22,18 @@
   font-size: 4vh;
   height: 5vh;
   width:20vw;
+  margin-left: 1em;
 }
 .Sbutton{
   width: 2rem;
   height: 2rem;
+  cursor: pointer;
 }
 .Mcontainer {
   display: flex;
   justify-content: space-between;
   order:0;
+  
 }
 
 .Ncontainer{
@@ -35,13 +42,19 @@
 .Mcard {
   width: 65vh;
   height: fit-content;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+.review{
+  display: flex;
+  flex-direction: column;
 }
 
 .label{
-  margin-right:1rem;
+  
   font-size: 1.5rem;
+  
 }
+
 
 .nominated-movies {
   
