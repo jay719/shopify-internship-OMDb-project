@@ -12,10 +12,10 @@ const [search, setSearch] = useState('')
 const [movie, setMovie] = useState('')
 const [visible, setModalVisible] = useState(false)
 
-const nominateMovie = (movie) => {
+const nominateMovie = (nomination) => {
   console.log("done")
   setModalVisible(!visible)
-  if (nMovies.length < 5) {setNMovies(nMovies => nMovies.concat(movie))}
+  if (nMovies.length < 5) {setNMovies(nMovies => nMovies.concat(nomination))}
 }
 
 const searchMovie = () => {
@@ -54,7 +54,7 @@ const apiKey = "be23069c"
       </div>
       
       <div className="Ncontainer">
-      <NominatedMovies movies={nMovies} />
+      <NominatedMovies nominations={nMovies} />
       </div>
   </div>
   

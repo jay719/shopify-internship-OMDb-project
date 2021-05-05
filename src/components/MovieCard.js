@@ -11,6 +11,11 @@ export default function MovieCard({movie, nominate}) {
         setRating(newRating)
     }
     
+    const nomination = {
+        movie: movie,
+        rating: rating,
+        review: review
+    }
     return (
         <div className="Mcard"> 
             <h1 className="Mtitle">{movie.Title}</h1>
@@ -45,7 +50,7 @@ export default function MovieCard({movie, nominate}) {
             </div>
             }
             
-            <button className="Nbutton" onClick={() => nominate(movie)}>Nominate?</button>
+            <button className="Nbutton" onClick={() => nominate(nomination)}>Nominate?</button>
         </div>
     )
 }

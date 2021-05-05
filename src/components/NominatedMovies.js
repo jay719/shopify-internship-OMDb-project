@@ -1,22 +1,20 @@
 import React, { useState } from 'react'
 
-export default function NominatedMovies({movies}) {
+export default function NominatedMovies({nominations}) {
 
     let i = 0
     const [message, setMessage] = useState(true)
     const endMessage = "You have nominated all 5 movies!"
 
-    function renderNominatedMovies(){
-        console.log(movies)
- 
-            return movies.map(movie => {
-                return <li key={i +1}>{movie.Title}</li>
+    function renderNominatedMovies(){ 
+            return nominations.map(nomination=> {
+                return <li key={i +1}>{nomination.movie.Title}</li>
                 })
             
     
     }
     function renderMessage (){
-        if (movies.length < 5) {return ""}
+        if (nominations.length < 5) {return ""}
         else {
              {return <p>{endMessage}</p>}
         }
@@ -29,6 +27,7 @@ export default function NominatedMovies({movies}) {
                 
             {renderNominatedMovies()}
             </ul>
+            
         </div>
     )
 }
