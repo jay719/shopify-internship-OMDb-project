@@ -19,7 +19,7 @@ export default function MovieCard({movie, nominate}) {
     return (
         <div className="Mcard"> 
             <h1 className="Mtitle">{movie.Title}</h1>
-            <h3>{movie.Genre}</h3>
+            <h3 className="Mgenre">{movie.Genre}</h3>
             <h2 className="Mrating">{movie.Rated}</h2>
             <p className="Mdescription"> {movie.Plot}</p>
             <img className="Mposter" src={movie.Poster} alt={movie.title} style={ {height: '120px',

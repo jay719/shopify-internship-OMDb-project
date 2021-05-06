@@ -13,6 +13,7 @@ export default function NominatedMovies({nominations}) {
                 return <div>
                     <li key={i +1}>
                         {nomination.movie.Title} 
+                        {}
                         <p>Nominated Rating: {nomination.rating}🌟</p>
                         <p> Personal Review:{nomination.review}</p>
                         

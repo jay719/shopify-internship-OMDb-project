@@ -44,14 +44,20 @@ html, body {  min-height: 100vh; background-color:#ffbfbf; font-family: 'Itim', 
   margin-left: 1em;
 }
 
-.Ncontainer{
-  background-color: white;
+.Mgenre {
+  font-weight: 800;
 }
+
 .Mcard {
   width: 65vh;
   height: fit-content;
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
+
+.Ncontainer{
+  background-color: white;
+}
+
 .review{
   display: flex;
   flex-direction: column;
