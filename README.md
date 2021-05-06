@@ -1,6 +1,6 @@
 # Real Reviews
 
-This project is a movie nominato made for a shopify competition.
+Read Me is Pending Update. This project helps you share your opinion and nominate movies
 
 ## Available Scripts
 
