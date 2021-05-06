@@ -8,7 +8,19 @@ export default function NominatedMovies({nominations}) {
 
     function renderNominatedMovies(){ 
             return nominations.map(nomination=> {
-                return <li key={i +1}>{nomination.movie.Title}</li>
+        console.log(nomination)
+
+                return <div>
+                    <li key={i +1}>
+                        {nomination.movie.Title} 
+                        <p>Nominated Rating: {nomination.rating}🌟</p>
+                        <p> Personal Review:{nomination.review}</p>
+                        
+                    </li>
+                
+                </div>
+                
+
                 })
             
     

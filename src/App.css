@@ -36,8 +36,16 @@ html, body {  min-height: 100vh; background-color:#ffbfbf; font-family: 'Itim', 
   
 }
 
+.Mrating {
+  margin-left: 1em;
+}
+
+.Mtitle {
+  margin-left: 1em;
+}
+
 .Ncontainer{
-  order:2;
+  background-color: white;
 }
 .Mcard {
   width: 65vh;

@@ -46,16 +46,17 @@ const apiKey = "be23069c"
             </label>
             <img className="Sbutton"src="https://webstockreview.net/images/movie-icon-png.png" alt="search" onClick={searchMovie} />
           {/* <input type="submit" value="Submit" onClick={searchMovie} /> */}
-        
+          
+          <div className="Ncontainer">
+          <NominatedMovies nominations={nMovies} />
+      </div>
           </div >
         
       <div className="Mcontainer">
         <MovieCard movie={movie} nominate={nominateMovie}/>
       </div>
       
-      <div className="Ncontainer">
-      <NominatedMovies nominations={nMovies} />
-      </div>
+      
   </div>
   
     
