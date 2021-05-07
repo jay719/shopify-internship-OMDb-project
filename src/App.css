@@ -3,7 +3,7 @@
 
 html, body {  min-height: 100vh; background-color:#ffbfbf; font-family: 'Itim', cursive;; }
 .body {
-  display: flex;
+  
   flex-direction: row;
   justify-content: space-around;
   flex:1;
@@ -12,7 +12,7 @@ html, body {  min-height: 100vh; background-color:#ffbfbf; font-family: 'Itim', 
 }
 
 .Search{
-  order: 1;
+  
   margin-left:1rem;
   margin-top: 2rem;
   /* display: flex; */
@@ -29,35 +29,60 @@ html, body {  min-height: 100vh; background-color:#ffbfbf; font-family: 'Itim', 
   height: 2rem;
   cursor: pointer;
 }
-.Mcontainer {
+
+.cards{
   display: flex;
-  justify-content: space-between;
-  order:0;
+  justify-content: center;
+  
+  
+}
+.Mcontainer {
+
   
 }
 
 .Mrating {
   margin-left: 1em;
+  font-weight: 400;
 }
 
 .Mtitle {
   margin-left: 1em;
+  font-weight: 500;
+  font-size: 2rem;
+  text-shadow: 1px 1px 1px #c27a7a;
+  
 }
-
+.Mdescription{
+  text-shadow: 1px 1px 1px #c27a7a;
+  font-weight: 200;
+  font-size: 1.5em;
+}
 .Mgenre {
-  font-weight: 800;
+  font-weight: 200;
+  
 }
 
 .Mcard {
   width: 65vh;
   height: fit-content;
+  margin-right: 25em;
+ 
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
 .Ncontainer{
   background-color: white;
+  padding-right: 1em;
+  text-align: center;
+}
+.nominations{
+
 }
 
+.Ntitle{
+  
+}
 .review{
   display: flex;
   flex-direction: column;

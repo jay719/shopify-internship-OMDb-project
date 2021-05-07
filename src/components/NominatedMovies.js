@@ -34,7 +34,8 @@ export default function NominatedMovies({nominations}) {
         }
 
     return (
-        <div >
+        <div className="nominations">
+            <h1 className="Ntitle">Nominations</h1>
             {renderMessage()}
             <ul className="nominated-movies">
                 
