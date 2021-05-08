@@ -11,24 +11,13 @@ function App() {
 const [nMovies, setNMovies] = useState([]) 
 const [search, setSearch] = useState('')
 const [movie, setMovie] = useState('')
-const [visible, setClapVisible] = useState(false)
 
-const clap = () => {
-  console.log('done')
-  setClapVisible(true)
-  
-}
 const nominateMovie = (nomination) => {
-  clap();
-  setTimeout(setClapVisible(false), 300000);
+  
   if (nMovies.length < 5) {setNMovies(nMovies => nMovies.concat(nomination))};
   
 }
 
-const clapAway = () => {
-  
-  
-}
 
 const searchMovie = () => {
   
@@ -42,15 +31,6 @@ const apiKey = "be23069c"
   return (
    
   <div className="body">
-    {!visible ? "" : 
-    <div className="shade">
-      <div className="Dclapping">
-        <div className="clappingGif">
-          <img   src={clapping} alt="clapping" style={ {height: '40%',
-          width:'60%', zIndex: '1000'}}/> 
-        </div>
-      </div>
-    </div> }
     
     <div className="Search">  
       <label className="label">
@@ -67,7 +47,6 @@ const apiKey = "be23069c"
             />
         </label>
         <img className="Sbutton"src="https://webstockreview.net/images/movie-icon-png.png" alt="search" onClick={searchMovie} />
-      {/* <input type="submit" value="Submit" onClick={searchMovie} /> */}
       </div >
         
     <div className="cards">
