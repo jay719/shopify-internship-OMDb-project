@@ -11,7 +11,7 @@ function App() {
 const [nMovies, setNMovies] = useState([]) 
 const [search, setSearch] = useState('')
 const [movie, setMovie] = useState('')
-const [visible, setClapVisible] = useState(false)
+// const [visible, setClapVisible] = useState(false)
 
 const nominateMovie = (nomination) => {
   
@@ -31,14 +31,7 @@ const apiKey = "be23069c"
   return (
    
   <div className="body">
-    <div className="shade">
-    <div className="Dclapping">
-      <div className="clappingGif">
-    {visible ? "" : <img   src={clapping} alt="clapping" style={ {height: '40%',
-  width:'60%', zIndex: '1000'}}/> }
-      </div>
-    </div>
-    </div>
+    
         <div className="Search">  
           <label className="label">
               The Shoppies
