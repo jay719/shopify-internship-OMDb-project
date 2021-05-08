@@ -14,19 +14,20 @@ const [movie, setMovie] = useState('')
 const [visible, setClapVisible] = useState(false)
 
 const clap = () => {
-  console.log('done')
-  setClapVisible(true)
+  
+  setClapVisible(!visible)
   
 }
 const nominateMovie = (nomination) => {
-  clap();
-  setTimeout(setClapVisible(false), 300000);
-  if (nMovies.length < 5) {setNMovies(nMovies => nMovies.concat(nomination))};
   
-}
+  setClapVisible(!visible);
+  console.log(visible);
+  if (nMovies.length < 5) {
 
-const clapAway = () => {
-  
+    setNMovies(nMovies => nMovies.concat(nomination));
+    // setClapVisible(!visible);
+    // console.log(visible)
+  };
   
 }
 
@@ -42,15 +43,15 @@ const apiKey = "be23069c"
   return (
    
   <div className="body">
-    {!visible ? "" : 
-    <div className="shade">
+     
+    <div className="shade" style={visible ? {}: { display:'none'} }>
       <div className="Dclapping">
         <div className="clappingGif">
           <img   src={clapping} alt="clapping" style={ {height: '40%',
           width:'60%', zIndex: '1000'}}/> 
         </div>
       </div>
-    </div> }
+    </div> 
     
     <div className="Search">  
       <label className="label">
@@ -76,7 +77,7 @@ const apiKey = "be23069c"
       </div>
       
       <div className="Ncontainer">
-        <NominatedMovies nominations={nMovies}  />
+        <NominatedMovies nominations={nMovies} />
       </div>
     </div>
       
