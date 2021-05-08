@@ -11,25 +11,33 @@ function App() {
 const [nMovies, setNMovies] = useState([]) 
 const [search, setSearch] = useState('')
 const [movie, setMovie] = useState('')
-// const [visible, setClapVisible] = useState(false)
 
+<<<<<<< HEAD
 const clap = () => {
   
   setClapVisible(!visible)
   
 }
 const nominateMovie = (nomination) => {
+=======
+const nominateMovie = (nomination) => {
+  
+  if (nMovies.length < 5) {setNMovies(nMovies => nMovies.concat(nomination))};
+>>>>>>> 11606a29271364fab4d445696dd06c9b2355d5f5
   
   setClapVisible(!visible);
   console.log(visible);
   if (nMovies.length < 5) {
 
+<<<<<<< HEAD
     setNMovies(nMovies => nMovies.concat(nomination));
     // setClapVisible(!visible);
     // console.log(visible)
   };
   
 }
+=======
+>>>>>>> 11606a29271364fab4d445696dd06c9b2355d5f5
 
 const searchMovie = () => {
   
@@ -44,6 +52,7 @@ const apiKey = "be23069c"
    
   <div className="body">
 <<<<<<< HEAD
+<<<<<<< HEAD
      
     <div className="shade" style={visible ? {}: { display:'none'} }>
       <div className="Dclapping">
@@ -53,6 +62,8 @@ const apiKey = "be23069c"
         </div>
       </div>
     </div> 
+=======
+>>>>>>> 11606a29271364fab4d445696dd06c9b2355d5f5
     
     <div className="Search">  
       <label className="label">
@@ -69,8 +80,8 @@ const apiKey = "be23069c"
             />
         </label>
         <img className="Sbutton"src="https://webstockreview.net/images/movie-icon-png.png" alt="search" onClick={searchMovie} />
-      {/* <input type="submit" value="Submit" onClick={searchMovie} /> */}
       </div >
+<<<<<<< HEAD
 =======
     
         <div className="Search">  
@@ -91,6 +102,8 @@ const apiKey = "be23069c"
           {/* <input type="submit" value="Submit" onClick={searchMovie} /> */}
           </div >
 >>>>>>> fb00ba8c70ccbe9ccc3a59f9d7aa951ca0112700
+=======
+>>>>>>> 11606a29271364fab4d445696dd06c9b2355d5f5
         
     <div className="cards">
       <div className="Mcontainer">
