@@ -11,7 +11,7 @@ function App() {
 const [nMovies, setNMovies] = useState([]) 
 const [search, setSearch] = useState('')
 const [movie, setMovie] = useState('')
-const [visible, setClapVisible] = useState(false)
+// const [visible, setClapVisible] = useState(false)
 
 const clap = () => {
   
@@ -43,6 +43,7 @@ const apiKey = "be23069c"
   return (
    
   <div className="body">
+<<<<<<< HEAD
      
     <div className="shade" style={visible ? {}: { display:'none'} }>
       <div className="Dclapping">
@@ -70,6 +71,26 @@ const apiKey = "be23069c"
         <img className="Sbutton"src="https://webstockreview.net/images/movie-icon-png.png" alt="search" onClick={searchMovie} />
       {/* <input type="submit" value="Submit" onClick={searchMovie} /> */}
       </div >
+=======
+    
+        <div className="Search">  
+          <label className="label">
+              The Shoppies
+              <input 
+              className="Sbar"
+              type="text" 
+              value={search} 
+              onChange={(e) => {
+                  setSearch(e.target.value); 
+                  {searchMovie()}
+                    } 
+                  }
+                />
+            </label>
+            <img className="Sbutton"src="https://webstockreview.net/images/movie-icon-png.png" alt="search" onClick={searchMovie} />
+          {/* <input type="submit" value="Submit" onClick={searchMovie} /> */}
+          </div >
+>>>>>>> fb00ba8c70ccbe9ccc3a59f9d7aa951ca0112700
         
     <div className="cards">
       <div className="Mcontainer">
