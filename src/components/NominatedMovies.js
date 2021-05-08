@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 
+
 export default function NominatedMovies({nominations}) {
 
     let i = 0
     const [message, setMessage] = useState(true)
     const endMessage = "You have nominated all 5 movies!"
 
-    function renderNominatedMovies(){ 
+    const renderNominatedMovies = () => { 
             return nominations.map(nomination=> {
         console.log(nomination)
 
@@ -26,17 +27,20 @@ export default function NominatedMovies({nominations}) {
             
     
     }
-    function renderMessage (){
+    const renderMessage = () => {
         if (nominations.length < 5) {return ""}
         else {
-             {return <p>{endMessage}</p>}
+            {return <p>{endMessage}</p>}
         }
         }
+
+        
 
     return (
         <div className="nominations">
             <h1 className="Ntitle">Nominations</h1>
             {renderMessage()}
+            
             <ul className="nominated-movies">
                 
             {renderNominatedMovies()}

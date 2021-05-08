@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './App.css';
 import MovieCard from './components/MovieCard.js'
 import NominatedMovies from './components/NominatedMovies.js'
+import clapping from './images/clapping.gif'
 
 function App() {
   
@@ -10,19 +11,19 @@ function App() {
 const [nMovies, setNMovies] = useState([]) 
 const [search, setSearch] = useState('')
 const [movie, setMovie] = useState('')
-const [visible, setModalVisible] = useState(false)
+const [visible, setClapVisible] = useState(false)
 
 const nominateMovie = (nomination) => {
-  console.log("done")
-  setModalVisible(!visible)
+  
   if (nMovies.length < 5) {setNMovies(nMovies => nMovies.concat(nomination))}
 }
 
 const searchMovie = () => {
-  console.log('done')
+  
     fetch(`https://www.omdbapi.com/?t=${search}&apikey=${apiKey}&type=movie&r=json`)
     .then(response => response.json())
     .then(movie => setMovie(movie))
+    .then(console.log('done') )
 
 }
 
@@ -30,9 +31,17 @@ const apiKey = "be23069c"
   return (
    
   <div className="body">
+    <div className="shade">
+    <div className="Dclapping">
+      <div className="clappingGif">
+    {visible ? "" : <img   src={clapping} alt="clapping" style={ {height: '40%',
+  width:'60%', zIndex: '1000'}}/> }
+      </div>
+    </div>
+    </div>
         <div className="Search">  
           <label className="label">
-              Movie Finder
+              The Shoppies
               <input 
               className="Sbar"
               type="text" 
@@ -52,6 +61,7 @@ const apiKey = "be23069c"
           <div className="Mcontainer">
             <MovieCard movie={movie} nominate={nominateMovie}/>
           </div>
+          
           <div className="Ncontainer">
             <NominatedMovies nominations={nMovies} />
           </div>

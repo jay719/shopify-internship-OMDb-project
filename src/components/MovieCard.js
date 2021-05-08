@@ -16,14 +16,17 @@ export default function MovieCard({movie, nominate}) {
         rating: rating,
         review: review
     }
+
+    
     return (
-        <div className="Mcard"> 
+        <div className="Mcard">
+            <img className="Mposter" src={movie.Poster} alt={movie.title} style={ {height: '10rem',
+  width:'40%'}}/>
             <h2 className="Mtitle">{movie.Title}</h2>
             <h3 className="Mgenre">{movie.Genre}</h3>
             <h2 className="Mrating">Rating: {movie.Rated}</h2>
             <p className="Mdescription"> {movie.Plot}</p>
-            <img className="Mposter" src={movie.Poster} alt={movie.title} style={ {height: '120px',
-  width:'100px'}}/>
+            
             {add ? 
             <p style={{fontSize:'1.5em', cursor:'pointer'}} onClick={() => {addReview(!add)}} >+Add Review?</p> : 
             <div>
@@ -51,7 +54,7 @@ export default function MovieCard({movie, nominate}) {
             </div>
             }
             
-            <button className="Nbutton" onClick={() => nominate(nomination)}>Nominate?</button>
+            <button className="Nbutton" onClick={() => nominate(nomination)}>Nominate</button>
         </div>
     )
 }

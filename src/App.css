@@ -3,14 +3,35 @@
 
 html, body {  min-height: 100vh; background-color:#ffbfbf; font-family: 'Itim', cursive;; }
 .body {
-  
+  height: 100%;
   flex-direction: row;
   justify-content: space-around;
-  flex:1;
-  /* paddipadding-bottom: 3rem; */
+  /* flex:1; */
+  
   
 }
 
+.clappingGif{
+  
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+}
+.shade{
+  background-color: rgba(0,0,0,0.9);background-color: rgba(0,0,0,0.9);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  
+  
+}
+
+.Dclapping{
+  z-index: 1000;
+  
+  
+
+}
 .Search{
   
   margin-left:1rem;
@@ -37,8 +58,8 @@ html, body {  min-height: 100vh; background-color:#ffbfbf; font-family: 'Itim', 
   
 }
 .Mcontainer {
-
-  
+margin-top: 30px;
+text-align: center;
 }
 
 .Mrating {
@@ -68,7 +89,7 @@ html, body {  min-height: 100vh; background-color:#ffbfbf; font-family: 'Itim', 
   height: fit-content;
   margin-right: 25em;
  
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .Ncontainer{
