@@ -23,7 +23,7 @@ export default function MovieCard({movie, nominate}) {
             <img className="Mposter" src={movie.Poster} alt={movie.title} style={ {height: '10rem',
   width:'40%'}}/>
             <h2 className="Mtitle">{movie.Title}</h2>
-            <h3 className="Mgenre">{movie.Genre}</h3>
+            <h3 className="Mgenre">Genre: {movie.Genre}</h3>
             <h2 className="Mrating">Rating: {movie.Rated}</h2>
             <p className="Mdescription"> {movie.Plot}</p>
             

@@ -71,7 +71,7 @@ text-align: center;
   margin-left: 1em;
   font-weight: 500;
   font-size: 2rem;
-  text-shadow: 1px 1px 1px #c27a7a;
+  
   
 }
 .Mdescription{
@@ -81,6 +81,7 @@ text-align: center;
 }
 .Mgenre {
   font-weight: 200;
+  text-shadow: 1px 1px 1px #c27a7a;
   
 }
 

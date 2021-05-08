@@ -3,7 +3,6 @@ import { useState } from 'react';
 import './App.css';
 import MovieCard from './components/MovieCard.js'
 import NominatedMovies from './components/NominatedMovies.js'
-import clapping from './images/clapping.gif'
 
 function App() {
   
@@ -11,36 +10,16 @@ function App() {
 const [nMovies, setNMovies] = useState([]) 
 const [search, setSearch] = useState('')
 const [movie, setMovie] = useState('')
+const [visible, setModalVisible] = useState(false)
 
-<<<<<<< HEAD
-const clap = () => {
-  
-  setClapVisible(!visible)
-  
-}
 const nominateMovie = (nomination) => {
-=======
-const nominateMovie = (nomination) => {
-  
-  if (nMovies.length < 5) {setNMovies(nMovies => nMovies.concat(nomination))};
->>>>>>> 11606a29271364fab4d445696dd06c9b2355d5f5
-  
-  setClapVisible(!visible);
-  console.log(visible);
-  if (nMovies.length < 5) {
-
-<<<<<<< HEAD
-    setNMovies(nMovies => nMovies.concat(nomination));
-    // setClapVisible(!visible);
-    // console.log(visible)
-  };
-  
+  console.log("done")
+  setModalVisible(!visible)
+  if (nMovies.length < 5) {setNMovies(nMovies => nMovies.concat(nomination))}
 }
-=======
->>>>>>> 11606a29271364fab4d445696dd06c9b2355d5f5
 
 const searchMovie = () => {
-  
+  console.log('done')
     fetch(`https://www.omdbapi.com/?t=${search}&apikey=${apiKey}&type=movie&r=json`)
     .then(response => response.json())
     .then(movie => setMovie(movie))
@@ -51,42 +30,9 @@ const apiKey = "be23069c"
   return (
    
   <div className="body">
-<<<<<<< HEAD
-<<<<<<< HEAD
-     
-    <div className="shade" style={visible ? {}: { display:'none'} }>
-      <div className="Dclapping">
-        <div className="clappingGif">
-          <img   src={clapping} alt="clapping" style={ {height: '40%',
-          width:'60%', zIndex: '1000'}}/> 
-        </div>
-      </div>
-    </div> 
-=======
->>>>>>> 11606a29271364fab4d445696dd06c9b2355d5f5
-    
-    <div className="Search">  
-      <label className="label">
-          The Shoppies
-          <input 
-          className="Sbar"
-          type="text" 
-          value={search} 
-          onChange={(e) => {
-              setSearch(e.target.value); 
-              {searchMovie()}
-                } 
-              }
-            />
-        </label>
-        <img className="Sbutton"src="https://webstockreview.net/images/movie-icon-png.png" alt="search" onClick={searchMovie} />
-      </div >
-<<<<<<< HEAD
-=======
-    
         <div className="Search">  
           <label className="label">
-              The Shoppies
+              Movie Finder
               <input 
               className="Sbar"
               type="text" 
@@ -101,21 +47,21 @@ const apiKey = "be23069c"
             <img className="Sbutton"src="https://webstockreview.net/images/movie-icon-png.png" alt="search" onClick={searchMovie} />
           {/* <input type="submit" value="Submit" onClick={searchMovie} /> */}
           </div >
->>>>>>> fb00ba8c70ccbe9ccc3a59f9d7aa951ca0112700
-=======
->>>>>>> 11606a29271364fab4d445696dd06c9b2355d5f5
         
-    <div className="cards">
-      <div className="Mcontainer">
-        <MovieCard movie={movie} nominate={nominateMovie}/>
-      </div>
-      
-      <div className="Ncontainer">
-        <NominatedMovies nominations={nMovies} />
-      </div>
-    </div>
+        <div className="cards">
+          <div className="Mcontainer">
+            <MovieCard movie={movie} nominate={nominateMovie}/>
+          </div>
+          <div className="Ncontainer">
+            <NominatedMovies nominations={nMovies} />
+          </div>
+        </div>
       
   </div>
+  
+    
+  
+
   );
 
   
