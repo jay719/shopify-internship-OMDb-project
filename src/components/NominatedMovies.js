@@ -1,3 +1,4 @@
+import { cleanup } from '@testing-library/react'
 import React, { useState } from 'react'
 
 
@@ -8,8 +9,9 @@ export default function NominatedMovies({nominations}) {
     const endMessage = "You have nominated all 5 movies!"
 
     const renderNominatedMovies = () => { 
+        
             return nominations.map(nomination=> {
-        console.log(nomination)
+        // console.log(nomination)
 
                 return <div>
                     <li key={i +1}>
@@ -28,6 +30,7 @@ export default function NominatedMovies({nominations}) {
     
     }
     const renderMessage = () => {
+        
         if (nominations.length < 5) {return ""}
         else {
             {return <p>{endMessage}</p>}
