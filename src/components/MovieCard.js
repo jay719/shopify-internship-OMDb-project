@@ -17,7 +17,13 @@ export default function MovieCard({movie, nominate}) {
         review: review
     }
 
-    
+    const changeBackgroundColor = (e) => {
+        e.target.style.color = 'rgb(255 88 88)';
+      }
+
+    const changeColorBack = (e) => {
+        e.target.style.color = '#c27a7a'
+    }
     return (
         <div className="Mcard">
             <img className="Mposter" src={movie.Poster} alt={movie.title} style={ {height: '10rem',
@@ -28,9 +34,9 @@ export default function MovieCard({movie, nominate}) {
             <p className="Mdescription"> {movie.Plot}</p>
             
             {add ? 
-            <p style={{fontSize:'1.5em', cursor:'pointer'}} onClick={() => {addReview(!add)}} >+Add Review?</p> : 
+            <p style={{fontSize:'1.5em', cursor:'pointer',color:'#c27a7a'}} onMouseOver={changeBackgroundColor} onMouseLeave={changeColorBack} onClick={() => {addReview(!add)}} >+Add Review?</p> : 
             <div>
-                <p style={{fontSize:'1em',cursor:'pointer'}} onClick={() => {addReview(!add)}} >-Hide Review?</p> 
+                <p style={{fontSize:'1em',cursor:'pointer',color:'#c27a7a'}} onMouseOver={changeBackgroundColor} onMouseLeave={changeColorBack} onClick={() => {addReview(!add)}} >-Hide Review?</p> 
                 <div className="review">
                     <Rating
                     initialRating="0"

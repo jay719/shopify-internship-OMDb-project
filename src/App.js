@@ -3,19 +3,22 @@ import { useState } from 'react';
 import './App.css';
 import MovieCard from './components/MovieCard.js'
 import NominatedMovies from './components/NominatedMovies.js'
+import Confetti from 'react-confetti'
+import useWindowSize from 'react-use/lib/useWindowSize'
 
 function App() {
   
-
+const { width, height } = useWindowSize()
 const [nMovies, setNMovies] = useState([]) 
 const [search, setSearch] = useState('')
 const [movie, setMovie] = useState('')
-const [visible, setModalVisible] = useState(false)
+const [visible, setConfettiVisible] = useState(true)
 
 const nominateMovie = (nomination) => {
   console.log("done")
-  setModalVisible(!visible)
+  
   if (nMovies.length < 5) {setNMovies(nMovies => nMovies.concat(nomination))}
+    else {setConfettiVisible(!visible)}
 }
 
 const searchMovie = () => {
@@ -25,14 +28,21 @@ const searchMovie = () => {
     .then(movie => setMovie(movie))
 
 }
-
 const apiKey = "be23069c"
   return (
    
   <div className="body">
+    {visible ? null :
+      <Confetti
+        width={width}
+        height={height}
+        recycle='false'
+      /> 
+    }
+     
         <div className="Search">  
           <label className="label">
-              Movie Finder
+              The Shoppies
               <input 
               className="Sbar"
               type="text" 
