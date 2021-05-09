@@ -66,10 +66,10 @@ text-align: center;
   font-weight: 200;
   font-size: 1.5em;
 }
-.Mgenre {
-
+.icon{
+  width:3rem;
+  background-color: transparent;
 }
-
 .Mcard {
   width: 65vh;
   height: fit-content;
@@ -97,15 +97,9 @@ text-align: center;
   font-size: 1.5rem;
   
 }
-
-
-.nominated-movies {
-  
+.nominated-movies { 
   list-style-type:decimal
 }
-
 .review-text {
- width: 98%;
- 
- 
+  width: 98%;
 }
