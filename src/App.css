@@ -87,10 +87,6 @@ text-align: center;
   text-shadow: 1px 0px 1px #c27a7a;
   color: rgb(194, 122, 122);
 }
-
-.Ntitle{
-  
-}
 .review{
   display: flex;
   flex-direction: column;
