@@ -4,10 +4,7 @@ import React, { useState } from 'react'
 
 export default function NominatedMovies({nominations}) {
     let i = 0
-    const restart = () => {
-        
-    }
-    const endMessage = `You have nominated all 5 movies!${restart}`
+    const endMessage = 'Thank you for nominating all 5 movies! Refresh your browser to create a new list.'
     const renderNominatedMovies = () => { 
             return nominations.map(nomination=> {
                 return <div>
