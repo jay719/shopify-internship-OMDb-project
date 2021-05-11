@@ -64,7 +64,6 @@ export default function MovieCard({movie, nominate}) {
                 </div>
             </div>
             }
-            
             <button className="Nbutton" onClick={() => nominate(nomination)}>Nominate</button>
         </div>
     )
