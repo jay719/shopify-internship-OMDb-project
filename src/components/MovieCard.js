@@ -46,8 +46,8 @@ export default function MovieCard({movie, nominate}) {
                     <Rating
                     initialRating="0"
                     onChange={getRating}
-                        emptySymbol={<img src={starEmpty} alt="empty-star" className="icon" />}
-                        fullSymbol={<img src={starYellow} alt="full-star" className="icon" />}
+                    emptySymbol={<img src={starEmpty} alt="empty-star" className="icon" />}
+                    fullSymbol={<img src={starYellow} alt="full-star" className="icon" />}
                     />
                     <label className="label">
                     Review:

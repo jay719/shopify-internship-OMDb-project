@@ -20,7 +20,7 @@ export default function NominatedMovies({nominations}) {
     const renderMessage = () => {
         if (nominations.length < 5) {return ""}
             else {
-            {return <p>{endMessage}</p>}
+            { return <p>{endMessage}</p>}
             }
         }
     return (

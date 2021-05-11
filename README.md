@@ -2,7 +2,7 @@
 Welcome to the Shoppies where you can nominate up to four movies using the Ombd Api.
 
 ## Inspiration
-Shopify would like to get into the nomination business and tasked potential interns to create their webpage. 
+Shopify would like to get into the nomination business and tasked potential interns to create thIS webpage. 
 
 ## Technologies
 <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" width="45" height="45"/>
@@ -20,7 +20,7 @@ Visit the site: https://omdb-movie-nominater.web.app/
 Search for your favorite movie using the search bar above. When you are done typing click 'space' or the icon to the right to load the movie below. Once your movie has loaded you have the option to add a star rating and written review before nominating. Your nominations will appear to the right and be ready for a surprise if you nominate 5+ reviews. 
 
 ## Status
--Looking into animations for nominating each movie. 
+- Looking into animations for nominating each movie, 
 
 ## Contact
 <a href='https://www.linkedin.com/in/javaria-brascom-0510991bb/'><img alt="LinkedIn" src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a>
