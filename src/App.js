@@ -61,7 +61,6 @@ const apiKey = "be23069c"
         <NominatedMovies nominations={nMovies} />
       </div>
     </div>
-      
   </div>
   
     
