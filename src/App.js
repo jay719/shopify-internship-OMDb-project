@@ -63,8 +63,6 @@ const apiKey = "be23069c"
     </div>
   </div>
   );
-
-  
 }
 
 export default App;
