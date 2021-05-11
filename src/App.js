@@ -41,10 +41,10 @@ const apiKey = "be23069c"
       <label className="label">
           The Shoppies
           <input 
-          className="Sbar"
-          type="text" 
-          value={search} 
-          onChange={(e) => {
+            className="Sbar"
+            type="text" 
+            value={search} 
+            onChange={(e) => {
               setSearch(e.target.value); 
               {searchMovie()}
                 } 
@@ -52,7 +52,7 @@ const apiKey = "be23069c"
             />
       </label>
       <img className="Sbutton" src="https://webstockreview.net/images/movie-icon-png.png" alt="search" onClick={searchMovie} />
-      </div >
+    </div >
     <div className="cards">
       <div className="Mcontainer">
         <MovieCard movie={movie} nominate={nominateMovie}/>
