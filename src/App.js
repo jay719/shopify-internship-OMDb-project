@@ -62,10 +62,6 @@ const apiKey = "be23069c"
       </div>
     </div>
   </div>
-  
-    
-  
-
   );
 
   
